@@ -1,9 +1,9 @@
 package fpinscala.chapter02
 
-import org.scalatest._
-import Currying._
+import fpinscala.BaseSpec
+import fpinscala.chapter02.Currying._
 
-class CurryingSpec extends FlatSpec with Matchers with DiagrammedAssertions {
+class CurryingSpec extends BaseSpec {
 
   val repeat: (String, Int) => String = (message: String, repeat: Int) => message * repeat
 

@@ -1,9 +1,9 @@
 package fpinscala.chapter02
 
-import org.scalatest._
-import Fib._
+import fpinscala.BaseSpec
+import fpinscala.chapter02.Fib._
 
-class FibSpec extends FlatSpec with Matchers with DiagrammedAssertions {
+class FibSpec extends BaseSpec {
 
   behavior of "fib"
 

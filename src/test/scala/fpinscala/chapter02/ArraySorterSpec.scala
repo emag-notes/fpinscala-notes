@@ -1,9 +1,9 @@
 package fpinscala.chapter02
 
-import org.scalatest._
-import ArraySorter._
+import fpinscala.BaseSpec
+import fpinscala.chapter02.ArraySorter._
 
-class ArraySorterSpec extends FlatSpec with Matchers with DiagrammedAssertions {
+class ArraySorterSpec extends BaseSpec {
 
   behavior of "isSorted"
 

@@ -1,9 +1,9 @@
 package fpinscala.chapter02
 
-import org.scalatest._
-import Compose._
+import fpinscala.BaseSpec
+import fpinscala.chapter02.Compose._
 
-class ComposeSpec extends FlatSpec with Matchers with DiagrammedAssertions {
+class ComposeSpec extends BaseSpec {
 
   val square: Double => Double = (x: Double) => x * x
   val show: Double => String   = (x: Double) => x.toString
