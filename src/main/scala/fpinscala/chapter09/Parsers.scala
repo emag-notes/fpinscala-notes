@@ -122,7 +122,7 @@ trait Parsers[ParseError, Parser[+ _]] {
     def <*(p2: => Parser[Any])  = self.skipR(p, p2)
 
     def label(msg: String): Parser[A] = self.label(msg)(p)
-    def sep(separator: Parser[Any]) = self.sep(p, separator)
+    def sep(separator: Parser[Any])   = self.sep(p, separator)
     def scope(msg: String): Parser[A] = self.scope(msg)(p)
 
   }
@@ -132,7 +132,7 @@ trait Parsers[ParseError, Parser[+ _]] {
 case class Location(input: String, offset: Int = 0) {
   lazy val line = input.slice(0, offset + 1).count(_ == '\n') + 1
   lazy val col = input.slice(0, offset + 1).lastIndexOf('\n') match {
-    case -1 => offset + 1
+    case -1        => offset + 1
     case lineStart => offset - lineStart
   }
 }
