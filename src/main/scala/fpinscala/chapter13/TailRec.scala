@@ -261,4 +261,3 @@ object FreeOfIO {
   def runConsoleState[A](io: ConsoleIO[A]): ConsoleState[A] = runFree[Console, ConsoleState, A](io)(consoleToState)
 
 }
-
